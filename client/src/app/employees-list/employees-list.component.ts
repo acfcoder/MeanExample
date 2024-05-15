@@ -21,7 +21,7 @@ import { EmployeeService } from '../employee.service';
       }
     `,
   ],
-  templateUrl: "employees-list.component.html",
+  templateUrl: 'employees-list.component.html',
 })
 
 export class EmployeesListComponent implements OnInit {

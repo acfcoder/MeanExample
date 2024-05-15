@@ -8,7 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   standalone: true,
   imports: [RouterOutlet, EmployeesListComponent, MatToolbarModule],
   template: `
-      <mat-toolbar>
+    <mat-toolbar>
       <span>Employees Management System</span>
     </mat-toolbar>
     <main>
