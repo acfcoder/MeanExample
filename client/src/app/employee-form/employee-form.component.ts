@@ -40,12 +40,12 @@ export class EmployeeFormComponent {
   formsValuesChanged = new EventEmitter<Employee>();
 
   @Output()
-  formsSubmitted = new EventEmitter<Employee>();
+  formSubmitted = new EventEmitter<Employee>();
 
   employeeForm = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
     position: ['', [Validators.required, Validators.minLength(5)]],
-    level: ['junios', [Validators.required]],
+    level: ['junior', [Validators.required]],
   });
 
   constructor(private formBuilder: FormBuilder) {
@@ -71,7 +71,7 @@ export class EmployeeFormComponent {
   }
 
   submitForm() {
-    this.formsSubmitted.emit(this.employeeForm.value as Employee);
+    this.formSubmitted.emit(this.employeeForm.value as Employee);
   }
  
 }
