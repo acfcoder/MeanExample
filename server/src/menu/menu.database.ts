@@ -3,11 +3,11 @@ import { Product } from "./product";
 import { Category } from "./category";
 
 export const collections: {
-    products?: mongodb.Collection<Product>:
+    products?: mongodb.Collection<Product>;
     categories?: mongodb.Collection<Category>;
 } = {};
 
-export async function connectToDatabase(url: string) {
+export async function connectToDatabase(uri: string) {
     const client = new mongodb.MongoClient(uri);
     await client.connect();
 
